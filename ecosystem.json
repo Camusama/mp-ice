@@ -1,0 +1,29 @@
+{
+  "apps": [{
+    "name": "Ice",
+    "script": "server.js",
+    "env": {
+      "COMMON_VARIABLE": "true"
+    },
+    "env_production": {
+      "NODE_ENV": "production"
+    }
+
+  }],
+  "deploy": {
+    "production": {
+      "user": "root",
+      "host": ["39.108.180.157"],
+      //"port": "39999",
+      "ref": "origin/master",
+      "repo": "https://github.com/Camusama/mp-ice.git",
+      "path": "/root/www/ice/production",
+      "ssh_options": "StrictHostKeyChecking=no",
+      "pre-deploy-local": "echo 'Deploy Done!'",
+      "env": {
+        "NODE_ENV": "production"
+      }
+    }
+  }
+}
+
