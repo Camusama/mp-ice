@@ -1,7 +1,8 @@
 {
   "apps": [{
     "name": "mp-ice",
-    "script": "start.js",
+    "script": "npm",
+    "args":"start",
     "env": {
       "COMMON_VARIABLE": "true"
     },
